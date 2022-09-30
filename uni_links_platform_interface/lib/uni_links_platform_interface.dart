@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 import 'package:uni_links_platform_interface/src/method_channel_uni_links.dart';
 
@@ -45,4 +46,8 @@ abstract class UniLinksPlatform extends PlatformInterface {
   /// NOTE: base code found in [MethodChannelUniLinks.linkStream]
   Stream<String?> get linkStream => throw UnimplementedError(
       'getLinksStream has not been implemented on the current platform.');
+  
+
+  MethodChannel getMethodChannel() => throw UnimplementedError(
+      'getMethodChannel has not been implemented on the current platform.');
 }
